@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-input type="text" placeholder="Digite o nome"[(ngModel)]="nome"></ion-input>
+<ion-input type="number" placeholder="Digite a idade"[(ngModel)]="idade"></ion-input>
+<ion-item>
+  <ion-label>Sexo</ion-label>
+  <ion-select placeholder="Selecione" [(ngModel)]="sexo">
+    <ion-select-option value="f">Feminino</ion-select-option>
+    <ion-select-option value="m">Masculino</ion-select-option>
+  </ion-select>
+</ion-item>
+<ion-button (click)="getValores()" expand="block" fill="clean" shape="round">
+  Mostrar
+</ion-button>
+<ion-button (click)="enviar()" expand="block" fill="clean" shape="round">
+  Enviar
+</ion-button>
+</ion-content>
